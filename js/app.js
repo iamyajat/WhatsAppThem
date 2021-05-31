@@ -8,8 +8,11 @@ if ("serviceWorker" in navigator) {
 }
 
 function onClick() {
-  url = "https://wa.me/" + document.getElementById("phone").value + "/"
-  window.open(url);
+  const phoneNumber = document.getElementById("phone").value
+  if (phoneNumber !== "") {
+    url = "https://wa.me/" + phoneNumber + "/"
+    window.open(url);
+  }
 }
 
 document.getElementById("submit").addEventListener("click", onClick)

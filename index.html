@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="manifest" href="manifest.json" />
-    <!-- ios support -->
-    <link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
-    <link rel="apple-touch-icon" href="images/icons/icon-96x96.png" />
-    <link rel="apple-touch-icon" href="images/icons/icon-128x128.png" />
-    <link rel="apple-touch-icon" href="images/icons/icon-144x144.png" />
-    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png" />
-    <link rel="apple-touch-icon" href="images/icons/icon-192x192.png" />
-    <link rel="apple-touch-icon" href="images/icons/icon-384x384.png" />
-    <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
-    <meta name="apple-mobile-web-app-status-bar" content="#A53AF7" />
-    <meta name="theme-color" content="#A53AF7" />
-    <title>WhatsAppThem</title>
-  </head>
 
-  <body>
-    <main>
-      <nav>
-        <h1>WhatsAppThem</h1>
-        <ul>
-          <li><a href="https://iamyajat.co" target="_blank">About</a></li>
-        </ul>
-      </nav>
-      <div class="card">
-        <label class="card--title" for="phone">Phone number:</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="+919876543210"
-          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-          required
-        />
-        <br />
-        <a id="submit" class="card--link" href="#">Send Message</a>
-      </div>
-    </main>
-    <script src="js/app.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="description"
+    content="A simple app which you can use to send WhatsApp messages without saving the number." />
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-128x128.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
+  <meta name="apple-mobile-web-app-status-bar" content="#A53AF7" />
+  <meta name="theme-color" content="#A53AF7" />
+  <link rel="shortcut icon" href="images/icons/icon.png" type="image/x-icon">
+  <title>WhatsAppThem</title>
+</head>
+
+<body>
+  <main>
+    <nav>
+      <img src="images/nav-logo.png" />
+      <ul>
+        <li><a class="nav--link" href="https://iamyajat.co" target="_blank">About</a></li>
+      </ul>
+    </nav>
+    <div class="card">
+      <label class="card--title" for="phone">Phone number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="+919876543210" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+        required />
+      <br />
+      <a id="submit" class="card--link" href="#">Send Message</a>
+    </div>
+    <div class="card2">
+      <h3 class="card--title">What is it?</h3>
+      <p>A simple app which you can use to send WhatsApp messages without saving the number.</p>
+    </div>
+    <div class="card2">
+      <h3 class="card--title">How to use?</h3>
+      <ol class="list">
+        <li>Copy the number</li>
+        <li>Paste it here</li>
+        <li>Hit Send Message</li>
+      </ol>
+    </div>
+  </main>
+  <footer>Made with 💜 by <a href="https://iamyajat.co" target="_blank">Yajat Malhotra</a></footer>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+
 </html>
