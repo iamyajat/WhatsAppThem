@@ -28,7 +28,7 @@ li {
   margin-right: 1rem;
 }
 h1 {
-  color: #458a47;
+  color: #A53AF7;
   margin-bottom: 0.5rem;
 }
 input {
@@ -62,7 +62,7 @@ input:focus {
 }
 .card--link {
   text-decoration: none;
-  background: #db4938;
+  background: #A53AF7;
   color: #fff;
   padding: 0.3rem 1rem;
   border-radius: 20px;
