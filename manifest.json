@@ -1,9 +1,9 @@
 {
   "name": "WhatsAppThem",
-  "short_name": "WAThem",
+  "short_name": "WhatsAppThem",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#fdfdfd",
+  "background_color": "#f4e5ff",
   "theme_color": "#A53AF7",
   "orientation": "portrait-primary",
   "icons": [
