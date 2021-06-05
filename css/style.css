@@ -136,3 +136,11 @@ footer {
 .list {
   padding: 0 20px 0 20px;
 }
+
+.contribute {
+  border-bottom: 1px solid #000;
+}
+
+.contribute:hover {
+  border-bottom: 1px solid #a53af7;
+}
