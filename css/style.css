@@ -35,7 +35,7 @@ input {
   background: inherit;
   border: 1px solid #ccc;
   border-radius: 0.7rem;
-  margin: 10px 0 15px 0;
+  margin: 10px 0 3px 0;
   padding: 0.75rem;
   line-height: 1.25rem;
   width: 100%;
@@ -43,6 +43,30 @@ input {
 input:focus {
   border: 1px solid #a53af7;
   outline: none;
+}
+textarea {
+  background: inherit;
+  border: 1px solid #ccc;
+  border-radius: 0.7rem;
+  margin: 10px 0 3px 0;
+  padding: 0.75rem;
+  line-height: 1.25rem;
+  width: 100%;
+  resize: none;
+  display: none;
+}
+textarea:focus {
+  border: 1px solid #a53af7;
+  outline: none;
+}
+small {
+  margin-left: 5px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+small:hover {
+  color: #a53af7;
 }
 a {
   text-decoration: none;
