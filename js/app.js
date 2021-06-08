@@ -14,8 +14,7 @@ function onClick() {
     var visibility = document.getElementById("messageShowHide").innerHTML
     if (visibility === "- Add message"){
       var message = document.getElementById("messageData").value
-      message = message.replaceAll("\n", "%0A")
-      message = message.replaceAll(" ", "%20")
+      message = encodeURIComponent(message)
       url += "?text=" + message
     }
     window.open(url);
