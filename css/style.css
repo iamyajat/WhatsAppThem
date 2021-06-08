@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+
 * {
   box-sizing: border-box;
 }
+
 body {
   background: #f4e5ff;
   font-family: "Noto Sans JP", sans-serif;
@@ -9,16 +11,19 @@ body {
   position: relative;
   min-height: 97vh;
 }
+
 main {
   max-width: 900px;
   margin: auto;
   padding: 0.5rem 0.5rem 2.5rem 0.5rem;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 ul {
   list-style: none;
   display: flex;
@@ -27,10 +32,12 @@ ul {
 li {
   margin-right: 1rem;
 }
+
 h1 {
   color: #a53af7;
   margin-bottom: 0.5rem;
 }
+
 input {
   background: inherit;
   border: 1px solid #ccc;
@@ -40,11 +47,14 @@ input {
   line-height: 1.25rem;
   width: 100%;
 }
+
 input:focus {
   border: 1px solid #a53af7;
   outline: none;
 }
+
 textarea {
+  font-family: "Noto Sans JP", sans-serif;
   background: inherit;
   border: 1px solid #ccc;
   border-radius: 0.7rem;
@@ -55,10 +65,12 @@ textarea {
   resize: none;
   display: none;
 }
+
 textarea:focus {
   border: 1px solid #a53af7;
   outline: none;
 }
+
 small {
   margin-left: 5px;
   font-size: 0.75rem;
@@ -68,6 +80,7 @@ small {
 small:hover {
   color: #a53af7;
 }
+
 a {
   text-decoration: none;
   transition: 0.3s;
@@ -90,6 +103,21 @@ footer {
   height: 2.5rem;
   text-align: center;
   width: 100%;
+}
+
+small,
+label,
+a,
+h1,
+h3,
+p,
+li,
+ul,
+footer {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .nav--link {
