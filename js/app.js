@@ -277,12 +277,13 @@ async function onClick() {
     if (phoneNumber[0] != "+") {
       try {
         countryCode = await getLocalCountry();
+        countryCode = "+" + countryCode;
       } catch (err) {
         console.log(err);
-        return;
+        // return;
       }
     }
-    url += "+" + countryCode + phoneNumber;
+    url += countryCode + phoneNumber;
     let visibility = document.getElementById("messageShowHide").innerHTML;
     if (visibility === "- Add message") {
       let message = document.getElementById("messageData").value;
