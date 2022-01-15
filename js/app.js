@@ -323,6 +323,9 @@ function checkNumber (e) {
       e.target.value = e.target.value.replace(/[^\d]/g, "");
     }
   }
+  if (e.key === 'Enter' || e.keyCode === 13) {
+    onClick();
+  }
 }
 
 document.getElementById("phone").addEventListener("keyup", checkNumber);
