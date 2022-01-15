@@ -268,29 +268,33 @@ async function getLocalCountry () {
 
 async function onClick () {
   let phoneNumber = document.getElementById("phone").value.trim();
-  // removing '-'(dashes) and ' '(whitespaces) re:( |-)
-  // would be better to parse and validate number
   phoneNumber = phoneNumber.replace(/( |-)/g, "");
-  let url = "https://wa.me/";
-  if (phoneNumber !== "") {
-    let countryCode = "";
-    if (phoneNumber[0] != "+") {
-      try {
-        countryCode = await getLocalCountry();
-        countryCode = "+" + countryCode;
-      } catch (err) {
-        console.log(err);
-        // return;
+  if (phoneNumber.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) {
+    document.getElementById("phone").style.borderColor = "#ccc";
+    document.getElementById("errormessage").innerHTML = "";
+    let url = "https://wa.me/";
+    if (phoneNumber !== "") {
+      let countryCode = "";
+      if (phoneNumber[0] != "+") {
+        try {
+          countryCode = await getLocalCountry();
+          countryCode = "+" + countryCode;
+        } catch (err) {
+          console.log(err);
+        }
       }
+      url += countryCode + phoneNumber;
+      let visibility = document.getElementById("messageShowHide").innerHTML;
+      if (visibility === "- Add message") {
+        let message = document.getElementById("messageData").value;
+        message = encodeURIComponent(message);
+        url += "?text=" + message;
+      }
+      window.open(url);
     }
-    url += countryCode + phoneNumber;
-    let visibility = document.getElementById("messageShowHide").innerHTML;
-    if (visibility === "- Add message") {
-      let message = document.getElementById("messageData").value;
-      message = encodeURIComponent(message);
-      url += "?text=" + message;
-    }
-    window.open(url);
+  } else {
+    document.getElementById("phone").style.borderColor = "red";
+    document.getElementById("errormessage").innerHTML = "Invalid phone number";
   }
 }
 
@@ -311,12 +315,12 @@ document.getElementById("messageShowHide").addEventListener("click", messageShow
 
 function checkNumber (e) {
   if (e.target.value[0] === "+") {
-    if (e.target.value.match(/[^\d,\-]/)) {
-      e.target.value = "+" + e.target.value.substring(1).replace(/[^\d,\-]/g, "");
+    if (e.target.value.match(/[^\d]/)) {
+      e.target.value = "+" + e.target.value.substring(1).replace(/[^\d]/g, "");
     }
   } else {
-    if (e.target.value.match(/[^\d,\-]/)) {
-      e.target.value = e.target.value.replace(/[^\d,\-]/g, "");
+    if (e.target.value.match(/[^\d]/)) {
+      e.target.value = e.target.value.replace(/[^\d]/g, "");
     }
   }
 }

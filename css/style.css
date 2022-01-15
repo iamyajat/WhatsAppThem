@@ -225,3 +225,9 @@ footer {
   text-align: center;
   width: 100%;
 }
+
+.errormessage {
+  color: red;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
