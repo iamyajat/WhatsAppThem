@@ -270,7 +270,6 @@ async function onClick () {
   let phoneNumber = document.getElementById("phone").value.trim();
   phoneNumber = phoneNumber.replace(/( |-)/g, "");
   if (phoneNumber.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) {
-    document.getElementById("phone").style.borderColor = "#ccc";
     document.getElementById("errormessage").innerHTML = "";
     let url = "https://wa.me/";
     if (phoneNumber !== "") {
@@ -295,6 +294,7 @@ async function onClick () {
   } else {
     document.getElementById("phone").style.borderColor = "red";
     document.getElementById("errormessage").innerHTML = "Invalid phone number";
+    document.getElementById("phone").focus();
   }
 }
 
@@ -329,3 +329,12 @@ function checkNumber (e) {
 }
 
 document.getElementById("phone").addEventListener("keyup", checkNumber);
+
+
+function onClickOutside (e) {
+  if (!document.getElementById('submit').contains(e.target)) {
+    document.getElementById("phone").style.borderColor = "#ccc";
+  }
+}
+
+window.addEventListener('click', onClickOutside);
