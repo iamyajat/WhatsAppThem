@@ -250,7 +250,7 @@ if ("serviceWorker" in navigator) {
   })
 }
 
-async function getLocalCountry() {
+async function getLocalCountry () {
   let locationData;
   try {
     locationData = await fetch("https://geolocation-db.com/json/", {
@@ -266,7 +266,7 @@ async function getLocalCountry() {
   return countryPrefix.split(", ")[0];
 }
 
-async function onClick() {
+async function onClick () {
   let phoneNumber = document.getElementById("phone").value.trim();
   // removing '-'(dashes) and ' '(whitespaces) re:( |-)
   // would be better to parse and validate number
@@ -296,7 +296,7 @@ async function onClick() {
 
 document.getElementById("submit").addEventListener("click", onClick)
 
-function messageShowHide() {
+function messageShowHide () {
   var visibility = document.getElementById("messageShowHide").innerHTML
   if (visibility === "+ Add message") {
     document.getElementById("messageShowHide").innerHTML = "- Add message";
@@ -308,3 +308,17 @@ function messageShowHide() {
 }
 
 document.getElementById("messageShowHide").addEventListener("click", messageShowHide);
+
+function checkNumber (e) {
+  if (e.target.value[0] === "+") {
+    if (e.target.value.match(/[^\d,\-]/)) {
+      e.target.value = "+" + e.target.value.substring(1).replace(/[^\d,\-]/g, "");
+    }
+  } else {
+    if (e.target.value.match(/[^\d,\-]/)) {
+      e.target.value = e.target.value.replace(/[^\d,\-]/g, "");
+    }
+  }
+}
+
+document.getElementById("phone").addEventListener("keyup", checkNumber);
