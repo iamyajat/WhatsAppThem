@@ -13,7 +13,7 @@ body {
 }
 
 main {
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
   padding: 0.5rem 0.5rem 2.5rem 0.5rem;
 }
@@ -158,6 +158,21 @@ footer {
 }
 
 .card2:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.19), 0 5px 5px rgba(0, 0, 0, 0.23);
+}
+
+.card3 {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
+  border-radius: 10px;
+  margin: 20px 0 0 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.card3:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.19), 0 5px 5px rgba(0, 0, 0, 0.23);
 }
 
