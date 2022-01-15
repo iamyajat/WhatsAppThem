@@ -96,15 +96,6 @@ img {
   image-rendering: auto;
 }
 
-footer {
-  padding: 20px;
-  position: absolute;
-  bottom: 0px;
-  height: 2.5rem;
-  text-align: center;
-  width: 100%;
-}
-
 small,
 label,
 a,
@@ -210,4 +201,27 @@ footer {
 
 .contribute:hover {
   border-bottom: 1px solid #a53af7;
+}
+
+.sponsor-btn {
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  margin: 5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 0.7rem;
+  color: #000;
+}
+
+.sponsor-btn:hover {
+  color: #a53af7;
+  border: 1px solid #a53af7;
+}
+
+.footer {
+  padding-top: 30px;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
 }
