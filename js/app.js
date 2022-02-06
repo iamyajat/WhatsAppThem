@@ -269,7 +269,7 @@ async function getLocalCountry () {
 async function onClick () {
   let phoneNumber = document.getElementById("phone").value.trim();
   phoneNumber = phoneNumber.replace(/( |-)/g, "");
-  if (phoneNumber.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)) {
+  if (phoneNumber.match(/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/)) {
     document.getElementById("errormessage").innerHTML = "";
     let url = "https://wa.me/";
     if (phoneNumber !== "") {
