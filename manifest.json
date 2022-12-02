@@ -1,6 +1,6 @@
 {
   "name": "WhatsAppThem",
-  "short_name": "WAThem",
+  "short_name": "WhatsAppThem",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f4e5ff",
